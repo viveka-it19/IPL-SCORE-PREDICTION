@@ -1,0 +1,29 @@
+{% extends "layout.html"%}
+
+{% block content %}
+<div class="display__container">
+    <h2 style="font-weight:600;text-align:center;">LIVE SCORE</h2>
+    <br>
+    <div class="row">
+    {% for tournamentlist in tournamentlists %}
+
+
+        <div class="card" style="width: 35rem;">
+            <img src="{{tournamentlist.tour_imageUrl}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">{{tournamentlist.tour_team1}} vs {{tournamentlist.tour_team1}}</h3>
+                <p class="card-text"><b>DATE</b> 📅📅:{{tournamentlist.tour_date}}</p>
+                <p class="card-text"><b>TIME</b> ⏲⏲:{{tournamentlist.tour_time}}</p>
+                <p class="card-text"><b>IN</b>:{{tournamentlist.tour_place}}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+

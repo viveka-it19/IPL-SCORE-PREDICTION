@@ -1,0 +1,32 @@
+{% extends "layout.html"%}
+
+{% block content %} 
+
+<div class="display__container">
+    <h2 style="font-weight:600;text-align:center;">LIST OF MATCHES</h2>
+    <br>
+    <div class="row">
+    {% for match in matchList %}
+
+        <div class="card" style="width: 35rem;">
+            <img src="{{match.imageUrl}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">{{match.team1}} vs {{match.team2}}</h3>
+                <p class="card-text"><b>DATE</b> 📅📅:{{match.date}}</p>
+                <p class="card-text"><b>TIME</b> ⏲⏲:{{match.time}}</p>
+                <p class="card-text"><b>IN</b>:{{match.place}}</p>
+
+                <h4>Be Ready for war</h4>
+            </div>
+        </div>
+
+
+    {% endfor %}
+</div>
+<br>
+</div>
+
+
+
+{% endblock %}
+

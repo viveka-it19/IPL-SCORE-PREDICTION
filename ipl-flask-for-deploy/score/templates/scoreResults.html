@@ -1,0 +1,19 @@
+{% extends "layout.html"%}
+{% block content %} 
+
+
+<div class="result__full">
+        <center><h1 class="result__title">Score Prediction</h1></center>
+        <div class="result__container">
+                <div class="result__left">
+                        <img class="result__image" src="https://www.sangbadpratidin.in/wp-content/uploads/2020/08/ipl-main.jpg" alt="" srcset="">
+                </div>
+                <div class="result__right">
+                        <h3 class="result__title">The Score is between: {{ lower_limit }} to {{ upper_limit }}</h3>
+                </div>
+        </div>  
+</div>
+
+ 
+
+{% endblock content %}

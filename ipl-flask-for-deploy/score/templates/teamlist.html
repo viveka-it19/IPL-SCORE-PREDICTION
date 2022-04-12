@@ -1,0 +1,19 @@
+{% extends "layout.html"%}
+
+{% block content %} 
+<div class="display__container">
+    <h2 style="font-weight:600;text-align:center;">LIST OF TEAMS</h2>
+    <br>
+    <div class="row">
+    {% for teamlist in teamLists %}
+    <div class="card" style="width: 18rem;">
+        <img  src="{{teamlist.teamImage}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title">{{teamlist.teamName}}</h3>
+          <p class="card-text">Team Size:{{teamlist.teamSize}}</p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

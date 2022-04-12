@@ -1,0 +1,75 @@
+{% extends "layout.html"%}
+{% block content %}    
+<div class="login__section">
+    <center><h2><b>LOGIN </b></h2></center>
+    <h2 class="score__title title_align">Join Here to Read all IPL Details.Get Ready Soon..🏏🏏🏏</h2>
+
+    <div class="login_container">
+        <div class="login__left">
+            <div class="login__inputField">
+                <div class="content-section">
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4">Log In</legend>
+                            <div class="form-group">
+                                {{ form.email.label(class="form-control-label") }}
+                                {% if form.email.errors %}
+                                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.email(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.password.label(class="form-control-label") }}
+                                {% if form.password.errors %}
+                                    {{ form.password(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.password(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-check">
+                                {{ form.remember(class="form-check-input") }}
+                                {{ form.remember.label(class="form-check-label") }}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            <center> {{ form.submit(class=" sub__button") }}</center>
+                           
+                        </div>
+    
+                    </form>
+                </div>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="login__right">
+            <img class="login__logo" src="https://cricket.yahoo.net/static-assets/waf-images/7c/25/9f/16-9/796-597/7b95b9f97585c5847f5ad2bd402004dd.jpeg" alt="" srcset="">
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
+
+
+
+

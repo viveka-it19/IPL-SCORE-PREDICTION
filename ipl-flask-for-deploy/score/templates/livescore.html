@@ -1,0 +1,45 @@
+{% extends "layout.html"%}
+
+{% block content %}
+
+<div class="display__container">
+  <h2 style="font-weight:600;text-align:center;">LIST OF TOURNAMENT</h2>
+    <div class="row">
+
+        {% for livescore in livescores %}
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.iplcricketmatch.com/wp-content/uploads/2019/12/ipl-2020-today-match.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ livescore.score_team1}} vs {{ livescore.score_team2 }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>Score:</b>       {{ livescore.score_live}}</li>
+              <li class="list-group-item"><b>Wickets:</b>     {{ livescore.score_wicket}}</li>
+              <li class="list-group-item"><b>Over:</b>Over       {{ livescore.score_over}}</li>
+              <li class="list-group-item"><b>Batting Team:</b>{{ livescore.score_batting_team}}</li>
+              <li class="list-group-item"><b>Bowling Team:</b>{{ livescore.score_bowling_team}}</li>
+            </ul>
+
+        </div>
+        <!-- <p>Team1: {{ livescore.score_team1}}</p>
+        <p>Team2: {{ livescore.score_team2}}</p>
+        <p>score_live: {{ livescore.score_live}}</p>
+        <p>score_wicket: {{ livescore.score_wicket}}</p>
+        <p>score_over: {{ livescore.score_over}}</p>
+        <p>score_batting_team: {{ livescore.score_batting_team}}</p>
+        <p>score_bowling_team: {{ livescore.score_bowling_team}}</p> -->
+    {% endfor %}
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+  

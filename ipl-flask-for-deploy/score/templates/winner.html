@@ -1,0 +1,91 @@
+{% extends "layout.html"%}
+{% block content %}    
+<div class="score__page">
+    <center><h1 class="score__title">Winner Prediction</h1></center>
+    <div class="score__container">
+        <div class="score__left">
+            <img class="winner__image" src="https://resources.platform.iplt20.com/photo-resources/2021/05/29/a2f4966a-1fe0-469a-b801-1d93960b1965/IPL-2021.jpg?width=1200&height=600" alt="" srcset="">
+        </div>
+        <div class="score__right">
+            <div class="score__InputField">
+<form action="{{url_for('winnerPrediction')}}" method="POST">
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="venue">
+        <option value="none">Select the Venue</option>
+        <option value="Barabati Stadium">Barabati Stadium</option>
+        <option value="Brabourne Stadium">Brabourne Stadium</option>
+        <option value="Buffalo Park">Buffalo Park</option>
+        <option value="De Beers Diamond Oval">De Beers Diamond Oval</option>
+        <option value="Dr DY Patil Sports Academy">Dr DY Patil Sports Academy</option>
+        <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+        <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+        <option value="Eden Gardens">Eden Gardens</option>
+        <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+        <option value="Himachal Pradesh Cricket Association Stadium">Himachal Pradesh Cricket Association Stadium</option>
+        <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+        <option value="JSCA International Stadium Complex">JSCA International Stadium Complex</option>
+        <option value="Kingsmead">Kingsmead</option>
+        <option value="M Chinnaswamy Stadium">M Chinnaswamy Stadium</option>
+        <option value="M.Chinnaswamy Stadium">M.Chinnaswamy Stadium</option>
+        <option value="MA Chidambaram Stadium, Chepauk">MA Chidambaram Stadium, Chepauk</option>
+        <option value="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</option>
+        <option value="New Wanderers Stadium">New Wanderers Stadium</option>
+        <option value="Newlands">Newlands</option>
+        <option value="OUTsurance Oval">OUTsurance Oval</option>
+        <option value="Punjab Cricket Association IS Bindra Stadium, Mohali">Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+        <option value="Punjab Cricket Association Stadium, Mohali">Punjab Cricket Association Stadium, Mohali</option>
+        <option value="Rajiv Gandhi International Stadium, Uppal">Rajiv Gandhi International Stadium, Uppal</option>
+        <option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+        <option value="Sawai Mansingh Stadium">Sawai Mansingh Stadium</option>
+        <option value="Shaheed Veer Narayan Singh International Stadium">Shaheed Veer Narayan Singh International Stadium</option>
+        <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+        <option value="Sheikh Zayed Stadium">Sheikh Zayed Stadium</option>
+        <option value="Subrata Roy Sahara Stadium">Subrata Roy Sahara Stadium</option>
+        <option value="SuperSport Park">SuperSport Park</option>
+        <option value="Wankhede Stadium">Wankhede Stadium</option>
+    </select>
+
+        <!-- Batting Team Dropdown -->
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="team1">
+            <option value="none">Select Team 1</option>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Kings XI Punjab">Kings XI Punjab</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Delhi Daredevils">Delhi Daredevils</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        </select><br>
+        <!-- Bowling Team Dropdown -->
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="team2">
+            <option value="none">Select Team 2</option>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Kings XI Punjab">Kings XI Punjab</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Delhi Daredevils">Delhi Daredevils</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        </select><br>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="toss_winner">
+        <option value="none">Select the Toss-winner</option>
+        <option value="team1">Team1</option>
+        <option value="team2">Team2</option>
+    </select>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="toss_decision">
+        <option value="none">Select the Toss Choice</option>
+        <option value="batt">Batting</option>
+        <option value="field">Fielding</option>
+    </select>
+    <input type="submit" class="sub__button" value="Predict Score">
+</form>
+</div>
+</div>
+</div>
+{% endblock content %}
+   
+
+
+
+

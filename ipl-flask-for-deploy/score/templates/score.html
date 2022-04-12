@@ -1,0 +1,59 @@
+{% extends "layout.html"%}
+{% block content %}   
+
+<div class="score__page">
+<center><h1 class="score__title">Score Prediction</h1></center>
+<div class="score__container">
+    
+    <div class="score__left">
+        <img class="score__image" src="https://media.istockphoto.com/photos/cricket-batsman-hitting-ball-during-cricket-match-in-stadium-picture-id519665528?k=20&m=519665528&s=612x612&w=0&h=LdNONbw6vZ10CVolV-5GB6yEAJdNCwv8wKKbAL7sfko=" alt="" srcset="">
+    </div>
+    <div class="score__right">
+        <div class="score__InputField">
+
+        
+        <form action="{{ url_for('scorePredict') }}" method="POST">
+
+             <div class="scoreInput__dropdown">
+
+                <!-- Batting Team Dropdown -->
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="batting-team">
+                    <option value="none">Select a Batting team</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select>
+                <!-- Bowling Team Dropdown -->
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="bowling-team">
+                    <option value="none">Select a Bowling team</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select>
+             </div>
+             <div class="scoreInput__field form-group">
+                <input class="form-control form-control-lg" type="text" name="runs" placeholder="Runs" autocomplete="off"><br>
+                <input class="form-control form-control-lg" type="text" name="overs" placeholder="overs" autocomplete="off"><br>
+                <input class="form-control form-control-lg" type="text" name="wickets" placeholder="Wickets" autocomplete="off"><br>
+                <input class="form-control form-control-lg" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs" autocomplete="off"><br>
+                <input class="form-control form-control-lg" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs" autocomplete="off"><br>
+             </div>
+            <input type="submit" class="sub__button" value="Predict Score">
+        </div>
+    </form>
+    </div>
+</div>
+
+</div>
+
+    {% endblock content %}

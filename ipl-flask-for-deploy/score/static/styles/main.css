@@ -1,0 +1,451 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+body{
+    min-height: 100%;
+
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent;  
+}
+
+
+.header{
+    padding-left:100px;
+    padding-right:100px;
+    height:70px;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+
+}
+
+.header__text > li > a{
+    color:black !important;
+    font-size:large;
+    padding-left:10px;
+}
+
+.header__text > li > a:hover{
+    color:white !important;
+}
+
+
+.header__logo{
+    height:100%;
+    width:85px;
+}
+
+.header__toggler{
+    color:black;
+}
+
+.header__right{
+    margin-left: 800px;
+}
+
+
+
+/* Banner */
+
+
+
+.banner{
+    height:750px;
+    width:100%;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+
+}
+
+.banner__contain{
+    display: flex;
+    margin-left: 50px;
+    margin-right:50px;
+    padding-top:100px;
+    padding-left: 150px;
+}
+
+
+.banner__left{
+ flex:0.4;
+ margin-left: 50px;
+}
+
+
+.banner__right{
+    flex:0.5;
+    background-repeat: no-repeat;
+    /* background-image: url("https://www.pngmart.com/files/6/Cricket-PNG-Picture.png"); */
+}
+
+.banner__image{
+    object-fit: contain;
+    height:500px;
+    min-width: 300px;
+    /* height:auto; */
+    width:100%;
+    max-width: 100%;
+    margin-top:25px;
+    padding-left: 100px;
+    overflow-x: hidden;
+    color:white;
+}
+
+.banner__title{
+    margin-top:75px;
+    font-family:MonteCarlo;
+    /* font-size:60px; */
+    font-size:5vw;
+    font-weight: 600;
+    padding-top:50px;
+    
+    
+}
+
+.banner_btn{
+    height: 40px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    margin:80px 0 0 110px;
+    font-weight: 400;
+}
+/* *********************************Grid Image********************* */
+.filter {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+.profiles img {
+    margin-right: -6px
+}
+
+.col-md-4 {
+    padding-top: 10px;
+}
+
+.row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .column {
+    -ms-flex: 25%; 
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 20px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  .container__ImageGrid
+  {
+    margin: 100px 100px 0px 100px;
+    padding-bottom: 200px;
+    /* margin: 100px; */
+  }
+
+.column img:hover {
+    cursor: pointer;
+    opacity: .75;
+    -webkit-transform: scale(1.3);
+	transform: scale(1.08);
+}
+.container__ImageGrid>h1{
+    text-align: center;
+    font-weight:600;
+    padding-bottom: 10px;
+}
+
+/* ******************************************************footer******************************************** */
+
+body{
+    position: relative;
+    margin: 0;
+    min-height: 100%;  
+    padding: 0;
+}
+
+.footer{
+    position: absolute;
+
+    /* left: 0; */
+    bottom: 0;
+    width: 100%;
+    /* height:350px; */
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+
+.footer__item {
+    padding-top:20px;
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.footer__buttons{
+    /* padding: 50px; */
+}
+
+.btn-primary{
+    border: none !important;
+    background-color:white !important;
+    color:black !important;
+    border-radius: 30px !important;
+    /* padding-left: 0px 10px 0px 10px !important; */
+    margin:15px;
+}
+
+.footer__text{
+    font-family:MonteCarlo;
+    /* font-size:60px; */
+    font-size:3vw;
+    font-weight: 600;
+    /* padding-top:50px; */
+    /* color: white; */
+}
+
+/* *********************************************Score Prediction page******************************************************** */
+.score__page{
+    margin-top: 100px;
+    
+}
+
+.score__title{
+    font-family:MonteCarlo;
+    font-weight: 600;
+}
+
+.score__container
+{
+    display: flex;
+    margin-top:60px;
+    padding-bottom: 60px;
+}
+
+.score__left{
+    flex: 0.6;
+}
+.score__right{
+    flex:0.4;
+}
+.sub__button{
+    height: 40px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 400;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+.score__image{
+    object-fit: contain;
+    height: 500px;
+    margin-left: 10px;
+    width:100%;
+}
+.winner__image{
+    object-fit: contain;
+    height: 400px;
+    margin-left: 10px;
+    width:100%;
+}
+
+.score__InputField{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+.result__full{
+    padding:100px;
+    padding-bottom: 100px;
+}
+.result__container{
+    display: flex;
+    padding-bottom: 100px;
+    padding-top:20px
+    
+}
+.result__image{
+    object-fit: contain;
+}
+.result__left{
+    flex:0.5;
+}
+.result__right{
+    flex:0.5;
+    text-align: center !important;
+    align-content:center;
+ 
+}
+
+.result__title{
+    font-family:MonteCarlo;
+    font-weight: 600;
+}
+
+
+.display__container{
+    padding-left: 100px;
+    padding-right: 100px;
+    /* padding-top: 20px; */
+    /* padding-left: 50px; */
+    
+}
+.card{
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+
+.login_container{
+    display:flex;
+    padding-top: 10px;
+    
+}
+.login__section{
+    margin-top:100px;
+    padding-bottom:100px;
+}
+.register__section{
+    margin-top:100px;
+    /* padding-bottom:100px; */
+}
+
+.login__left{
+    flex:0.5;
+    
+}
+.login__right{
+    flex:0.5;
+}
+
+.login__inputField{
+    margin-left: 20px;
+    margin-right:20px;
+    padding-bottom: 200px;
+}
+
+
+.register__inputField{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 200px;
+}
+
+.login__logo{
+    object-fit: contain;
+    width: 100%;
+    padding-top:15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+.title_align{
+    text-align: center;
+    padding: 15px;
+}
+@media screen and (max-width: 768px) {
+.score__container
+{
+    flex-direction: column;
+    margin-top:30px;
+}
+.result__container
+{
+    flex-direction: column;
+}
+.login_container{
+    flex-direction: column;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .result__container
+    {
+        align-items: center;
+        flex-direction: column;
+    }
+    }
+
+
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+@media(max-width:768px)
+{
+    .banner{
+        height:850px;
+    }
+    .banner__contain{
+        margin-left: 0px;
+        margin-right:0px;
+        padding-top:45px;
+        padding-left: 0px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .banner_btn{
+        margin-left:0px;
+    }
+}
+
+
+
+/* *************************************************TEST FIELD***************************** */
+
+.account__contain{
+    padding-top: 100px;
+}
+
+.display__container{
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.test_selection{
+    margin:100px;
+    
+    
+}
+
+
+
+
+
+.bootstrap-iso .form-control:focus{border-color: #7c0993 !important;  box-shadow: none !important; -webkit-box-shadow: none !important;} 
+.bootstrap-iso .has-error .form-control:focus{box-shadow: none !important; -webkit-box-shadow: none !important;}
